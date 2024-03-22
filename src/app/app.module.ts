@@ -7,9 +7,10 @@ import { ButtonModule } from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MockComponent } from './components/mock/mock.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
-  declarations: [AppComponent, MockComponent, HomepageComponent],
+  declarations: [AppComponent, MockComponent, HomepageComponent, NavbarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
