@@ -5,9 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ButtonModule } from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MockComponent } from './components/mock/mock.component';
+import { HomepageComponent } from './pages/homepage/homepage.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, MockComponent, HomepageComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
