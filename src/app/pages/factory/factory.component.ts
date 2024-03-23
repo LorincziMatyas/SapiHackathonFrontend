@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { PopUpService } from 'src/app/services/pop-up.service';
+import { Product } from 'src/app/models/product';
 
 export interface Data {
   what: string;
@@ -13,6 +14,28 @@ export interface Data {
   styleUrls: ['./factory.component.scss'],
 })
 export class FactoryComponent implements OnInit {
+  //HARDCODED DATA
+  tableElements: Product[] = [
+    {
+      name: 'Cipo',
+      costOfMakingUnit: 75,
+      requiredQuantity: 1000,
+      unitSellPrice: 45,
+    },
+    {
+      name: 'Cipo2',
+      costOfMakingUnit: 75,
+      requiredQuantity: 1000,
+      unitSellPrice: 45,
+    },
+    {
+      name: 'Cipo3',
+      costOfMakingUnit: 75,
+      requiredQuantity: 1000,
+      unitSellPrice: 45,
+    },
+  ];
+
   data: Data[] = [
     { what: 'Material', cost: 100000 },
     { what: 'Labor', cost: 58080 },
@@ -52,7 +75,6 @@ export class FactoryComponent implements OnInit {
     return this.data.reduce((total, item) => total + item.cost, 0);
   }
   addFactory() {
-    console.log('cifgfs');
     this.popUp
       .openEditPrompt(
         'Are you sure you want to buy another factory.This will cost you 50000$',
@@ -65,5 +87,8 @@ export class FactoryComponent implements OnInit {
           console.log('Ooops you dont have another company');
         }
       });
+  }
+  openFactoryList() {
+    this.popUp.openEditPromptTable(this.tableElements, 'Factories');
   }
 }

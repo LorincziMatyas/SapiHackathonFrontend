@@ -21,6 +21,7 @@ import { DialogModule } from 'primeng/dialog';
 import { CustomDialogComponent } from './components/custom-dialog/custom-dialog.component';
 import { DialogService } from 'primeng/dynamicdialog';
 import { DynamicDialogRef } from 'primeng/dynamicdialog';
+import { TableDialogComponent } from './components/table-dialog/table-dialog.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { DynamicDialogRef } from 'primeng/dynamicdialog';
     NavbarComponent,
     FactoryComponent,
     CustomDialogComponent,
+    TableDialogComponent,
   ],
   imports: [
     BrowserModule,
