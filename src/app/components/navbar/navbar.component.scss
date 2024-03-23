@@ -1,0 +1,19 @@
+.navbar-container {
+  width: 38vh;
+  background-color: lightgray;
+}
+
+.navbar-element-button {
+  margin-top: 10px;
+  width: 35vh;
+  margin-left: 10px;
+  background-color: transparent;
+  color: black;
+  font-style: italic;
+  text-align: left;
+  border: transparent;
+}
+
+.navbar-element-button:hover {
+  background-color: lightblue;
+}

@@ -14,6 +14,7 @@ import { SliderModule } from 'primeng/slider';
 import { InputTextModule } from 'primeng/inputtext';
 
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
     MockComponent,
     HomepageComponent,
     ProductpageComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
