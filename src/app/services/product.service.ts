@@ -9,7 +9,7 @@ export class ProductService {
   apiUri = 'http://127.0.0.1:5000';
   constructor(private http: HttpClient) {}
 
-  getProuctById(id: number) {
+  getProductById(id: number) {
     const url = this.apiUri + '/api/products/' + id;
     return this.http.get<Product>(url);
   }

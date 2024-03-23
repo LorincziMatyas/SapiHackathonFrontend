@@ -20,8 +20,12 @@ import { TableModule } from 'primeng/table';
 import { LoginpageComponent } from './pages/loginpage/loginpage.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { DropdownModule } from 'primeng/dropdown';
+import { DialogModule } from 'primeng/dialog';
+import { CustomDialogComponent } from './components/custom-dialog/custom-dialog.component';
+import { DialogService } from 'primeng/dynamicdialog';
+import { DynamicDialogRef } from 'primeng/dynamicdialog';
+import { TableDialogComponent } from './components/table-dialog/table-dialog.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FinancialreportpageComponent } from './pages/financialreportpage/financialreportpage.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +36,8 @@ import { FinancialreportpageComponent } from './pages/financialreportpage/financ
     ProductpageComponent,
     NavbarComponent,
     FactoryComponent,
+    CustomDialogComponent,
+    TableDialogComponent,
     LoginpageComponent,
     RegistrationComponent,
     FinancialreportpageComponent,
@@ -53,7 +59,7 @@ import { FinancialreportpageComponent } from './pages/financialreportpage/financ
     ReactiveFormsModule,
     DropdownModule,
   ],
-  providers: [],
+  providers: [DialogService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

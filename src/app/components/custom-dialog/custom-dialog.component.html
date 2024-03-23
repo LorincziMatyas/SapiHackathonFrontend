@@ -1,0 +1,11 @@
+<div class="modal-overlay">
+  <p>{{ promptText }}</p>
+
+  <br />
+  <p-button (click)="onSubmit()" label="YES"></p-button>
+  <p-button
+    (click)="onClose()"
+    styleClass="p-button-danger popup-btn"
+    label="No"
+  ></p-button>
+</div>

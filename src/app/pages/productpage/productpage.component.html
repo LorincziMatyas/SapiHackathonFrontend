@@ -22,21 +22,21 @@
       <div class="price-infos">
         <div class="card-price-info">
           <h1>
-            <b>{{ product.costOfMakingUnit }}$</b>
+            <b>{{ product.making_cost }}$</b>
           </h1>
           <p>Unit making price</p>
         </div>
 
         <div class="card-price-info">
           <h1>
-            <b>{{ product.unitSellPrice }}$</b>
+            <b>{{ product.unit_price }}$</b>
           </h1>
           <p>Unit sell price</p>
         </div>
 
         <div class="card-price-info">
           <h1>
-            <b>{{ product.requiredQuantity }}</b>
+            <b>{{ product.quantity }}</b>
           </h1>
           <p>Quantity</p>
         </div>
@@ -67,37 +67,24 @@
       <div>
         <h3>Factory Contract</h3>
         <p class="text-green">
-          <b
-            >Contract Intake:{{
-              product.unitSellPrice * product.requiredQuantity
-            }}$</b
-          >
+          <b>Contract Intake:{{ product.unit_price * product.quantity }}$</b>
         </p>
         <p class="text-red">
-          <b
-            >Expenses:{{
-              product.costOfMakingUnit * product.requiredQuantity
-            }}$</b
-          >
+          <b>Expenses:{{ product.making_cost * product.quantity }}$</b>
         </p>
 
         <p
           class="text-sell"
           [ngClass]="{
             'text-green':
-              (product.unitSellPrice - product.costOfMakingUnit) *
-                product.requiredQuantity >
-              0,
+              (product.unit_price - product.making_cost) * product.quantity > 0,
             'text-red':
-              (product.unitSellPrice - product.costOfMakingUnit) *
-                product.requiredQuantity <=
-              0
+              (product.unit_price - product.making_cost) * product.quantity <= 0
           }"
         >
           <b
             >Overall intake:{{
-              (product.unitSellPrice - product.costOfMakingUnit) *
-                product.requiredQuantity
+              (product.unit_price - product.making_cost) * product.quantity
             }}$</b
           >
         </p>

@@ -11,36 +11,35 @@ export class HomepageComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    console.log('OnInit');
-
+    // console.log('OnInit');
     // Call this function every 5 seconds
-    interval(5000)
-      .pipe(switchMap(() => this.getStocks()))
-      .subscribe(
-        (data) => {
-          console.log('Stocks: ', data);
-        },
-        (error) => {
-          console.error('Error fetching data:', error);
-        }
-      );
+    // interval(5000)
+    //   .pipe(switchMap(() => this.getStocks()))
+    //   .subscribe(
+    //     (data) => {
+    //       console.log('Stocks: ', data);
+    //     },
+    //     (error) => {
+    //       console.error('Error fetching data:', error);
+    //     }
+    //   );
   }
 
-  getUsers(): Observable<any> {
-    return this.http.get<any>('http://127.0.0.1:5000/api/users');
-  }
+  // getUsers(): Observable<any> {
+  //   return this.http.get<any>('http://127.0.0.1:5000/api/users');
+  // }
 
-  getTeams(): Observable<any> {
-    return this.http.get<any>('http://127.0.0.1:5000/api/teams');
-  }
+  // getTeams(): Observable<any> {
+  //   return this.http.get<any>('http://127.0.0.1:5000/api/teams');
+  // }
 
-  getCompanies(): Observable<any> {
-    return this.http.get<any>('http://127.0.0.1:5000/api/companies');
-  }
+  // getCompanies(): Observable<any> {
+  //   return this.http.get<any>('http://127.0.0.1:5000/api/companies');
+  // }
 
-  getStocks(): Observable<any> {
-    return this.http.get<any>('http://127.0.0.1:5000/api/stocks');
-  }
+  // getStocks(): Observable<any> {
+  //   return this.http.get<any>('http://127.0.0.1:5000/api/stocks');
+  // }
 }
 
 /* 
