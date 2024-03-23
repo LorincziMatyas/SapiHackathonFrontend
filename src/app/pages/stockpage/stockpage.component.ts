@@ -52,19 +52,37 @@ export class StockpageComponent implements OnInit {
   }
 
   viewLiveStocks(): void {
-    const intervalId = setInterval(this.updateStockLogs, 10000);
+    this.updateStockLogs();
+    setInterval(() => {
+      this.updateStockLogs();
+    }, 10000);
   }
 
   updateStockLogs(): void {
+    console.log('updateStockLogs');
+
     this.service.getStockLogs().subscribe({
       next: (value) => {
         this.stockLogs = value;
         this.processData();
+        this.updateMoneyInStocks();
       },
       error: (error: any) => {
         console.error('Error fetching data:', error);
       },
     });
+  }
+
+  updateMoneyInStocks(): void {
+    this.money = 0;
+    for (const stock of this.myStocks) {
+      for (const log of this.stockLogs) {
+        if (stock.id === log.stock_id) {
+          stock.stock_price = log.stock_price;
+        }
+      }
+      this.money += stock.stock_price;
+    }
   }
 
   processData(): void {
