@@ -22,12 +22,15 @@
           pButton
           icon="pi pi-eye"
           label="View Product"
+          (click)="openFactoryList()"
         ></button>
         <button
           class="new-factory-button"
           pButton
           icon="pi pi-plus"
           label="New Factory"
+          class="btn-green"
+          (click)="addFactory()"
         ></button>
       </div>
       <canvasjs-chart

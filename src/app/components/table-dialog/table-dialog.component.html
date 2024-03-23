@@ -1,0 +1,28 @@
+<div class="modal-overlay">
+  <p-table [value]="tableElements" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Factory</th>
+        <th>Product</th>
+        <th>View</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+      <tr>
+        <td>Factory</td>
+        <td>{{ product.name }}</td>
+        <td>
+          <button
+            pButton
+            label="View"
+            [routerLink]="['/products', 1]"
+            (click)="onClose()"
+          ></button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+  <br />
+  <p-button (click)="onClose()" styleClass="popup-btn" label="Done"></p-button>
+</div>
