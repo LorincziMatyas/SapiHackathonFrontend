@@ -17,16 +17,21 @@ import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FactoryComponent } from './pages/factory/factory.component';
 import { TableModule } from 'primeng/table';
-import { HttpClientModule } from '@angular/common/http';
+import { LoginpageComponent } from './pages/loginpage/loginpage.component';
+import { RegistrationComponent } from './pages/registration/registration.component';
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   declarations: [
     AppComponent,
     MockComponent,
     HomepageComponent,
+    NavbarComponent,
     ProductpageComponent,
     NavbarComponent,
     FactoryComponent,
+    LoginpageComponent,
+    RegistrationComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +47,8 @@ import { HttpClientModule } from '@angular/common/http';
     CardModule,
     ReactiveFormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    DropdownModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
