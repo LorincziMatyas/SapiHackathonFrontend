@@ -1,0 +1,58 @@
+<main>
+  <div
+    style="
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      padding-bottom: 20px;
+    "
+  >
+    <div class="company_budget">Company Budget: {{ compbudget }}</div>
+    <div class="company_budget">Money in stocks: {{ money }}</div>
+    <button
+      pButton
+      icon="pi pi-refresh"
+      style="gap: 10px; margin: 10px; margin-top: 25px"
+      (click)="updateStockLogs()"
+    >
+      View Live stocks
+    </button>
+    <!-- <button (click)="viewLiveStocks()">View Live stocks</button> -->
+  </div>
+
+  <div class="stock_container">
+    <div *ngFor="let stock of stocks; let i = index" class="stocks">
+      <div>{{ stock.company_name }}</div>
+      <div>Number of stocks of the company: {{ stock.stock_number }}</div>
+      <div>Price of one stock: {{ stock.stock_price }}</div>
+      <div class="chart_div">
+        CHART PLACEHOLDERS
+        <div>Stock price history</div>
+        <div style="display: flex; flex-wrap: wrap">
+          {{ data[i] }}
+        </div>
+      </div>
+
+      <!-- <canvasjs-chart [options]="chartOptions"></canvasjs-chart> -->
+      <div>
+        <button
+          pButton
+          icon="pi pi-shopping-cart"
+          style="gap: 10px; margin: 10px"
+          (click)="buyStock(stock)"
+        >
+          Buy
+        </button>
+        <button
+          pButton
+          icon="pi pi-money-bill"
+          style="gap: 10px; margin: 10px"
+          (click)="sellStock(stock)"
+        >
+          Sell
+        </button>
+      </div>
+    </div>
+  </div>
+</main>
