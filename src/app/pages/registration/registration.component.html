@@ -13,16 +13,10 @@
         </div>
         <input
           pInputText
-          type="text"
+          type="email"
           formControlName="email"
           id="email"
           name="email"
-          required
-          [ngClass]="{
-            'error-input':
-              registrationDates.get('email')?.invalid &&
-              registrationDates.get('email')?.touched
-          }"
         />
       </div>
       <div class="p-field">
@@ -36,39 +30,44 @@
           formControlName="username"
           id="username"
           name="username"
-          required
-          [ngClass]="{
-            'error-input':
-              registrationDates.get('username')?.invalid &&
-              registrationDates.get('username')?.touched
-          }"
         />
       </div>
       <div class="p-field">
         <div class="label-required">
-          <label for="TeamName">Team Name:</label>
+          <label for="password">Password:</label>
           <div class="required">*</div>
         </div>
-        <input
-          pInputText
-          type="text"
-          formControlName="teamName"
-          id="teamName"
-          name="teamName"
-          required
-          [ngClass]="{
-            'error-input':
-              registrationDates.get('teamName')?.invalid &&
-              registrationDates.get('teamName')?.touched
-          }"
-        />
+        <span class="p-float-label">
+          <input
+            pInputText
+            [type]="showPassword ? 'text' : 'password'"
+            formControlName="password"
+            id="password"
+            name="password"
+          />
+          <button
+            pButton
+            type="button"
+            icon="pi pi-eye"
+            *ngIf="showPassword"
+            class="password-toggle-btn"
+            (click)="togglePasswordVisibility()"
+          ></button>
+          <button
+            pButton
+            type="button"
+            icon="pi pi-eye-slash"
+            *ngIf="!showPassword"
+            class="password-toggle-btn"
+            (click)="togglePasswordVisibility()"
+          ></button>
+        </span>
       </div>
       <div class="button-container">
         <button
           pButton
-          class="p-button-register"
           type="button"
-          label="Register"
+          label="Regisztráció"
           icon="pi pi-check"
           styleClass="p-button-success"
           (click)="register()"

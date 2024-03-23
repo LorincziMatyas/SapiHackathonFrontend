@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Product } from 'src/app/models/product';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-productpage',
@@ -63,7 +64,7 @@ export class ProductpageComponent {
       },
     ],
   };
-  constructor() {}
+  constructor(private productService: ProductService) {}
 
   ngOnInit() {
     this.chartOptions = {

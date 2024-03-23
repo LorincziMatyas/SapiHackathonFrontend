@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgClass } from '@angular/common';
+import { ProductService } from 'src/app/services/product.service';
 
 export interface Data {
   what: string;
@@ -12,6 +13,7 @@ export interface Data {
   styleUrls: ['./factory.component.scss'],
 })
 export class FactoryComponent implements OnInit {
+  constructor(private productService: ProductService) {}
   data: Data[] = [
     { what: 'Material', cost: 100000 },
     { what: 'Labor', cost: 58080 },
@@ -20,14 +22,14 @@ export class FactoryComponent implements OnInit {
 
   chartOptions: any = {
     animationEnabled: true,
-    theme: 'dark2',
+
     title: {
       text: 'Total costs:' + this.calculateTotalCost() + ' $',
     },
     data: [
       {
         type: 'pie',
-        startAngle: 45,
+        startAngle: 90,
         indexLabel: '{name}: {y}',
         indexLabelPlacement: 'inside',
         dataPoints: [],
@@ -40,6 +42,12 @@ export class FactoryComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.productService.getProuctById(1).subscribe({
+      next: (response) => {
+        console.log('this.productService.getProuctById(1): ', response);
+      },
+    });
+
     this.chartOptions.data[0].dataPoints = [];
     this.data.forEach((item) => {
       this.chartOptions.data[0].dataPoints.push({

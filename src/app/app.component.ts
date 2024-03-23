@@ -10,8 +10,9 @@ export class AppComponent implements OnInit {
   constructor(private router: Router) {}
   isLoginPage = false;
   isRegisterPage = false;
-  isUser: boolean = false;
+  // isUser: boolean = false;
   title = 'frontend';
+
   ngOnInit() {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {

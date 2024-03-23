@@ -1,11 +1,11 @@
 <div class="navbar-fade-in-element">
-  <!-- <div *ngIf="!data.hideNavbar"> -->
   <nav class="navbar-container">
     <ng-container>
       <div class="navbar-element-logo">
         <a routerLink="/homepage">
           <h1>Ide jon a logo</h1>
         </a>
+        <button pButton class="user-button" icon="pi pi-user"></button>
       </div>
       <div class="navbar-element">
         <h3>Reports</h3>
@@ -33,6 +33,7 @@
               class="navbar-element-button"
               icon="pi pi-chart-line"
               label="Financial report"
+              routerLink="/financialReportPage"
             ></button>
           </div>
           <div class="navbar-button">

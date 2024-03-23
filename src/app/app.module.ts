@@ -20,6 +20,8 @@ import { TableModule } from 'primeng/table';
 import { LoginpageComponent } from './pages/loginpage/loginpage.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { DropdownModule } from 'primeng/dropdown';
+import { HttpClientModule } from '@angular/common/http';
+import { FinancialreportpageComponent } from './pages/financialreportpage/financialreportpage.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { DropdownModule } from 'primeng/dropdown';
     FactoryComponent,
     LoginpageComponent,
     RegistrationComponent,
+    FinancialreportpageComponent,
   ],
   imports: [
     BrowserModule,
