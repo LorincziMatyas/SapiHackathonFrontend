@@ -7,6 +7,7 @@ import { ButtonModule } from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MockComponent } from './components/mock/mock.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, MockComponent, HomepageComponent],
@@ -15,6 +16,7 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     ButtonModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
