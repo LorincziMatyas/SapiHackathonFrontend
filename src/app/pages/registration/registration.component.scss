@@ -24,6 +24,19 @@ input.error-input,
   display: flex;
 }
 
+.password-toggle-btn {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #333; /* Set the color of the icon */
+  background: none;
+  border: none;
+  outline: none; /* Remove the outline when button is focused */
+  cursor: pointer;
+}
+
 .required {
   font-size: x-large;
   font-weight: bolder;

@@ -6,6 +6,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FactoryComponent } from './pages/factory/factory.component';
 import { LoginpageComponent } from './pages/loginpage/loginpage.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
+import { FinancialreportpageComponent } from './pages/financialreportpage/financialreportpage.component';
 
 const routes: Routes = [
   { path: 'products/:id', component: ProductpageComponent },
@@ -21,13 +22,12 @@ const routes: Routes = [
   {
     path: 'loginUser',
     component: LoginpageComponent,
-    // data: { hideNavbar: true },
   },
   {
     path: 'registration',
     component: RegistrationComponent,
-    // data: { hideNavbar: true },
   },
+  { path: 'financialReportPage', component: FinancialreportpageComponent },
 ];
 
 @NgModule({
