@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.financial-table {
+  width: 90%; // A táblázat szélessége
+  margin-bottom: 20px; // Távolság a diagramtól
+}
+
+.p-datatable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+}
+
+.big-container {
+  padding: 25px;
+}
+
+.p-datatable th,
+.p-datatable td,
+.table-chart-container {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  width: 1050px;
+}
+
+.p-datatable th {
+  background-color: #f2f2f2;
+}
+
+.even-row {
+  background-color: #f2f2f2;
+}
+
+.show-pie-chart-button,
+.show-line-chart-button {
+  margin: 15px;
+}
+
+.total-cost {
+  font-weight: bold;
+  justify-content: end;
+}
+
+.chart-container {
+  display: flex;
+}
+
+.chart-column {
+  flex: 1;
+}

@@ -1,0 +1,78 @@
+<div class="login-page">
+  <div class="login-container p-fluid">
+    <h2>Registration</h2>
+    <form
+      [formGroup]="registrationDates"
+      (ngSubmit)="register()"
+      class="form-container"
+    >
+      <div class="p-field">
+        <div class="label-required">
+          <label for="email">Email:</label>
+          <div class="required">*</div>
+        </div>
+        <input
+          pInputText
+          type="email"
+          formControlName="email"
+          id="email"
+          name="email"
+        />
+      </div>
+      <div class="p-field">
+        <div class="label-required">
+          <label for="username">Username:</label>
+          <div class="required">*</div>
+        </div>
+        <input
+          pInputText
+          type="text"
+          formControlName="username"
+          id="username"
+          name="username"
+        />
+      </div>
+      <div class="p-field">
+        <div class="label-required">
+          <label for="password">Password:</label>
+          <div class="required">*</div>
+        </div>
+        <span class="p-float-label">
+          <input
+            pInputText
+            [type]="showPassword ? 'text' : 'password'"
+            formControlName="password"
+            id="password"
+            name="password"
+          />
+          <button
+            pButton
+            type="button"
+            icon="pi pi-eye"
+            *ngIf="showPassword"
+            class="password-toggle-btn"
+            (click)="togglePasswordVisibility()"
+          ></button>
+          <button
+            pButton
+            type="button"
+            icon="pi pi-eye-slash"
+            *ngIf="!showPassword"
+            class="password-toggle-btn"
+            (click)="togglePasswordVisibility()"
+          ></button>
+        </span>
+      </div>
+      <div class="button-container">
+        <button
+          pButton
+          type="button"
+          label="Regisztráció"
+          icon="pi pi-check"
+          styleClass="p-button-success"
+          (click)="register()"
+        ></button>
+      </div>
+    </form>
+  </div>
+</div>

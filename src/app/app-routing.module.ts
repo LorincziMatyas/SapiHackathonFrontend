@@ -4,10 +4,12 @@ import { ProductpageComponent } from './pages/productpage/productpage.component'
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FactoryComponent } from './pages/factory/factory.component';
+import { LoginpageComponent } from './pages/loginpage/loginpage.component';
+import { RegistrationComponent } from './pages/registration/registration.component';
+import { FinancialreportpageComponent } from './pages/financialreportpage/financialreportpage.component';
 
 const routes: Routes = [
   { path: 'products/:id', component: ProductpageComponent },
-
   {
     path: 'home',
     component: HomepageComponent,
@@ -17,6 +19,15 @@ const routes: Routes = [
     component: NavbarComponent,
   },
   { path: 'factoryPage', component: FactoryComponent },
+  {
+    path: 'loginUser',
+    component: LoginpageComponent,
+  },
+  {
+    path: 'registration',
+    component: RegistrationComponent,
+  },
+  { path: 'financialReportPage', component: FinancialreportpageComponent },
 ];
 
 @NgModule({

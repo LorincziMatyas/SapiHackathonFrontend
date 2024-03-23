@@ -1,0 +1,71 @@
+<div class="login-page">
+  <!-- *ngIf="loginDates; else loading" -->
+  <div class="login-container p-fluid">
+    <h2>Login</h2>
+    <form [formGroup]="loginDatas" (ngSubmit)="login()" class="form-container">
+      <div class="p-field">
+        <div class="label-required">
+          <label for="username">Username:</label>
+          <div class="required">*</div>
+        </div>
+        <input
+          pInputText
+          type="username"
+          formControlName="username"
+          id="username"
+          name="username"
+        />
+      </div>
+      <div class="p-field">
+        <div class="label-required">
+          <label for="password">Password:</label>
+          <div class="required">*</div>
+        </div>
+        <span class="p-float-label">
+          <input
+            pInputText
+            [type]="showPassword ? 'text' : 'password'"
+            formControlName="password"
+            id="password"
+            name="password"
+          />
+          <button
+            pButton
+            type="button"
+            icon="pi pi-eye"
+            *ngIf="showPassword"
+            class="password-toggle-btn"
+            (click)="togglePasswordVisibility()"
+          ></button>
+          <button
+            pButton
+            type="button"
+            icon="pi pi-eye-slash"
+            *ngIf="!showPassword"
+            class="password-toggle-btn"
+            (click)="togglePasswordVisibility()"
+          ></button>
+        </span>
+      </div>
+      <div class="forgot-password">
+        <a routerLink="/registration"> Register now! </a>
+      </div>
+      <div class="button-container">
+        <div *ngIf="!showPasswordField">
+          <p-button
+            class="p-button-login"
+            type="button"
+            label="login"
+            icon="pi pi-arrow-right"
+            (click)="login()"
+          ></p-button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- <ng-template #loading>
+  <div class="spinner-overlay">
+    <h1>loading</h1>
+  </div>
+</ng-template> -->

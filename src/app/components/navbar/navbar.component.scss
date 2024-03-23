@@ -15,6 +15,17 @@
   border: transparent;
 }
 
-.navbar-element-button:hover {
+.user-button {
+  margin-top: 10px;
+  width: 15vh;
+  margin-left: 10px;
+  background-color: transparent;
+  color: black;
+  display: flex;
+  justify-content: end;
+  border: transparent;
+}
+.navbar-element-button:hover,
+.user-button:hover {
   background-color: lightblue;
 }
