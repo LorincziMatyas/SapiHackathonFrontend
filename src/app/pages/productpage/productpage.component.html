@@ -50,16 +50,58 @@
     </div>
   </div>
 
-  <p-card class="custom-card">
-    <h2>Activity</h2>
-    <div class="activity-info">
-      <input
-        type="text"
-        pInputText
-        [(ngModel)]="value"
-        class="activity-info-input"
-      />
-      <p-slider [(ngModel)]="value" class="w-full"></p-slider>
-    </div>
-  </p-card>
+  <div class="bottom-container">
+    <p-card class="custom-card">
+      <h2>Activity</h2>
+      <div class="activity-info">
+        <input
+          type="text"
+          pInputText
+          [(ngModel)]="value"
+          class="activity-info-input"
+        />
+        <p-slider [(ngModel)]="value" class="w-full"></p-slider>
+      </div>
+    </p-card>
+    <p-card class="custom-card">
+      <div>
+        <h3>Factory Contract</h3>
+        <p class="text-red">
+          <b
+            >Expenses:{{
+              product.costOfMakingUnit * product.requiredQuantity
+            }}</b
+          >
+        </p>
+        <p class="text-green">
+          <b
+            >Contract Intake:{{
+              product.unitSellPrice * product.requiredQuantity
+            }}</b
+          >
+        </p>
+
+        <p
+          class="text-sell"
+          [ngClass]="{
+            'text-green':
+              (product.unitSellPrice - product.costOfMakingUnit) *
+                product.requiredQuantity >
+              0,
+            'text-red':
+              (product.unitSellPrice - product.costOfMakingUnit) *
+                product.requiredQuantity <=
+              0
+          }"
+        >
+          <b
+            >Overall intake:{{
+              (product.unitSellPrice - product.costOfMakingUnit) *
+                product.requiredQuantity
+            }}$</b
+          >
+        </p>
+      </div>
+    </p-card>
+  </div>
 </div>
