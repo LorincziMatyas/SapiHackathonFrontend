@@ -40,7 +40,6 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     InputTextModule,
     CardModule,
-    CanvasJSAngularChartsModule,
     ReactiveFormsModule,
     HttpClientModule,
   ],
