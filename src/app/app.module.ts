@@ -17,6 +17,10 @@ import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FactoryComponent } from './pages/factory/factory.component';
 import { TableModule } from 'primeng/table';
+import { DialogModule } from 'primeng/dialog';
+import { CustomDialogComponent } from './components/custom-dialog/custom-dialog.component';
+import { DialogService } from 'primeng/dynamicdialog';
+import { DynamicDialogRef } from 'primeng/dynamicdialog';
 
 @NgModule({
   declarations: [
@@ -26,6 +30,7 @@ import { TableModule } from 'primeng/table';
     ProductpageComponent,
     NavbarComponent,
     FactoryComponent,
+    CustomDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,8 +46,9 @@ import { TableModule } from 'primeng/table';
     CardModule,
     CanvasJSAngularChartsModule,
     ReactiveFormsModule,
+    DialogModule,
   ],
-  providers: [],
+  providers: [DialogService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

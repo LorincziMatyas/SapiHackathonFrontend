@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgClass } from '@angular/common';
+import { PopUpService } from 'src/app/services/pop-up.service';
 
 export interface Data {
   what: string;
@@ -35,9 +36,7 @@ export class FactoryComponent implements OnInit {
     ],
   };
 
-  calculateTotalCost(): number {
-    return this.data.reduce((total, item) => total + item.cost, 0);
-  }
+  constructor(private popUp: PopUpService) {}
 
   ngOnInit(): void {
     this.chartOptions.data[0].dataPoints = [];
@@ -47,5 +46,24 @@ export class FactoryComponent implements OnInit {
         name: item.what,
       });
     });
+  }
+
+  calculateTotalCost(): number {
+    return this.data.reduce((total, item) => total + item.cost, 0);
+  }
+  addFactory() {
+    console.log('cifgfs');
+    this.popUp
+      .openEditPrompt(
+        'Are you sure you want to buy another factory.This will cost you 50000$',
+        'Question'
+      )
+      .then((confirmed) => {
+        if (confirmed) {
+          console.log('Hurra you have another factory');
+        } else {
+          console.log('Ooops you dont have another company');
+        }
+      });
   }
 }
