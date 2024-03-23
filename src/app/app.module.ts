@@ -15,20 +15,30 @@ import { InputTextModule } from 'primeng/inputtext';
 
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { FactoryComponent } from './pages/factory/factory.component';
+import { TableModule } from 'primeng/table';
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 
 @NgModule({
   declarations: [
     AppComponent,
+
     MockComponent,
+
     HomepageComponent,
+
     ProductpageComponent,
     NavbarComponent,
+    FactoryComponent,
+    ,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ButtonModule,
+    TableModule,
+    CanvasJSAngularChartsModule,
     CardModule,
     SliderModule,
     FormsModule,
