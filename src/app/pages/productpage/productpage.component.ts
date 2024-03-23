@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/models/product';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-productpage',
@@ -11,12 +13,7 @@ export class ProductpageComponent {
   formGroup!: FormGroup;
   value: number = 50;
   actualProfit: number = 0;
-  product: Product = {
-    name: 'cipo',
-    costOfMakingUnit: 50,
-    requiredQuantity: 1000,
-    unitSellPrice: 75,
-  };
+  product!: Product;
   chartOptions = {
     animationEnabled: true,
     title: {
@@ -48,24 +45,33 @@ export class ProductpageComponent {
         name: 'Sell Price',
         legendText: 'Sell Price',
         showInLegend: true,
-        dataPoints: [
-          { label: this.product.name, y: this.product.unitSellPrice },
-        ],
+        dataPoints: [{ label: '', y: 0 }],
       },
       {
         type: 'column',
         name: 'Cost Price', // Renamed to reflect buying cost
         legendText: 'Cost Price',
         showInLegend: true,
-        dataPoints: [
-          { label: this.product.name, y: this.product.costOfMakingUnit },
-        ],
+        dataPoints: [{ label: '', y: 0 }],
       },
     ],
   };
-  constructor() {}
+  constructor(
+    private productService: ProductService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.productService.getProductById(id).subscribe({
+      next: (result) => {
+        this.product = result;
+        console.log(result);
+      },
+      error: (err) => {
+        console.error('Error fetching product:', err);
+      },
+    });
     this.chartOptions = {
       animationEnabled: true,
       title: {
@@ -98,7 +104,7 @@ export class ProductpageComponent {
           legendText: 'Sell Price',
           showInLegend: true,
           dataPoints: [
-            { label: this.product.name, y: this.product.unitSellPrice },
+            { label: this.product.name, y: this.product.unit_price },
           ],
         },
         {
@@ -107,7 +113,7 @@ export class ProductpageComponent {
           legendText: 'Cost Price',
           showInLegend: true,
           dataPoints: [
-            { label: this.product.name, y: this.product.costOfMakingUnit },
+            { label: this.product.name, y: this.product.making_cost },
           ],
         },
       ],

@@ -1,6 +1,8 @@
 export interface Product {
   name: string;
-  costOfMakingUnit: number;
-  requiredQuantity: number;
-  unitSellPrice: number;
+  making_cost: number;
+  quantity: number;
+  unit_price: number;
+  description: string;
+  factory_id: number;
 }

@@ -18,21 +18,27 @@ export class FactoryComponent implements OnInit {
   tableElements: Product[] = [
     {
       name: 'Cipo',
-      costOfMakingUnit: 75,
-      requiredQuantity: 1000,
-      unitSellPrice: 45,
+      making_cost: 75,
+      quantity: 1000,
+      unit_price: 45,
+      description: '',
+      factory_id: 1,
     },
     {
       name: 'Cipo2',
-      costOfMakingUnit: 75,
-      requiredQuantity: 1000,
-      unitSellPrice: 45,
+      making_cost: 75,
+      quantity: 1000,
+      unit_price: 45,
+      description: '',
+      factory_id: 1,
     },
     {
       name: 'Cipo3',
-      costOfMakingUnit: 75,
-      requiredQuantity: 1000,
-      unitSellPrice: 45,
+      making_cost: 75,
+      quantity: 1000,
+      unit_price: 45,
+      description: '',
+      factory_id: 1,
     },
   ];
 

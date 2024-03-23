@@ -48,6 +48,7 @@ import { HttpClientModule } from '@angular/common/http';
     InputTextModule,
     CardModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [DialogService],
   bootstrap: [AppComponent],
