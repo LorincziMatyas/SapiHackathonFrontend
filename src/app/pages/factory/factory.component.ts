@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { PopUpService } from 'src/app/services/pop-up.service';
 import { Product } from 'src/app/models/product';
+import { FactoryService } from 'src/app/services/factory-service.service';
 
 export interface Data {
   what: string;
@@ -65,7 +66,10 @@ export class FactoryComponent implements OnInit {
     ],
   };
 
-  constructor(private popUp: PopUpService) {}
+  constructor(
+    private popUp: PopUpService,
+    private factoryService: FactoryService
+  ) {}
 
   ngOnInit(): void {
     this.chartOptions.data[0].dataPoints = [];
@@ -88,6 +92,16 @@ export class FactoryComponent implements OnInit {
       )
       .then((confirmed) => {
         if (confirmed) {
+          this.factoryService.addFactory().subscribe({
+            next: (response) => {
+              console.log('Response:', response);
+              // Handle response here
+            },
+            error: (error) => {
+              console.error('Error:', error);
+              // Handle error here
+            },
+          });
           console.log('Hurra you have another factory');
         } else {
           console.log('Ooops you dont have another company');
