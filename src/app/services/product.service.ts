@@ -7,6 +7,7 @@ import { Product } from '../models/product';
 })
 export class ProductService {
   apiUri = 'http://127.0.0.1:5000';
+
   constructor(private http: HttpClient) {}
 
   getProductById(id: number) {

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { NgClass } from '@angular/common';
 import { PopUpService } from 'src/app/services/pop-up.service';
 import { Product } from 'src/app/models/product';
 import { FactoryService } from 'src/app/services/factory-service.service';
+import { ProductService } from 'src/app/services/product.service';
 
 export interface Data {
   what: string;
@@ -68,15 +68,27 @@ export class FactoryComponent implements OnInit {
 
   constructor(
     private popUp: PopUpService,
-    private factoryService: FactoryService
+    private factoryService: FactoryService,
+    private productService: ProductService
   ) {}
 
   ngOnInit(): void {
-    this.productService.getProuctById(1).subscribe({
-      next: (response) => {
+    this.productService.getProductById(1).subscribe({
+      next: (response: Product) => {
         console.log('this.productService.getProuctById(1): ', response);
       },
+      error: (error: any) => {
+        console.error('Error:', error);
+      },
     });
+    // this.productService.getProductById(1).subscribe({
+    //   next: (response: Product) => {
+    //     console.log('this.productService.getProuctById(1): ', response);
+    //   },
+    //   error: (error: any) => {
+    //     console.error('Error:', error);
+    //   },
+    // });
 
     this.chartOptions.data[0].dataPoints = [];
     this.data.forEach((item) => {

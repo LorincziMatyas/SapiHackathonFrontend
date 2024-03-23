@@ -18,14 +18,13 @@ import { TableModule } from 'primeng/table';
 import { LoginpageComponent } from './pages/loginpage/loginpage.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { DropdownModule } from 'primeng/dropdown';
-import { DialogModule } from 'primeng/dialog';
 import { CustomDialogComponent } from './components/custom-dialog/custom-dialog.component';
 import { DialogService } from 'primeng/dynamicdialog';
-import { DynamicDialogRef } from 'primeng/dynamicdialog';
 import { TableDialogComponent } from './components/table-dialog/table-dialog.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StockpageComponent } from './pages/stockpage/stockpage.component';
 import { ChartModule } from 'primeng/chart';
+import { FinancialreportpageComponent } from './pages/financialreportpage/financialreportpage.component';
 // import { MatMomentDateModule } from '@angular/material-moment-adapter'; // Import the MatMomentDateModule
 
 @NgModule({

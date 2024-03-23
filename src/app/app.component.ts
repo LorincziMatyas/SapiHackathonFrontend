@@ -8,13 +8,14 @@ import { NavigationEnd, Route, Router } from '@angular/router';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(
+    private localStorageService: LocalStorageService,
+    private router: Router
+  ) {}
   isLoginPage = false;
   isRegisterPage = false;
   // isUser: boolean = false;
   title = 'frontend';
-
-  constructor(private localStorageService: LocalStorageService) {}
 
   saveUserData(): void {
     const userData = {
