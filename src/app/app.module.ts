@@ -22,6 +22,7 @@ import { CustomDialogComponent } from './components/custom-dialog/custom-dialog.
 import { DialogService } from 'primeng/dynamicdialog';
 import { DynamicDialogRef } from 'primeng/dynamicdialog';
 import { TableDialogComponent } from './components/table-dialog/table-dialog.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -46,9 +47,7 @@ import { TableDialogComponent } from './components/table-dialog/table-dialog.com
     FormsModule,
     InputTextModule,
     CardModule,
-    CanvasJSAngularChartsModule,
     ReactiveFormsModule,
-    DialogModule,
   ],
   providers: [DialogService],
   bootstrap: [AppComponent],
