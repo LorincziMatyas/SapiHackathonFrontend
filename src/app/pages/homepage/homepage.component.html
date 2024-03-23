@@ -1,1 +1,90 @@
-<p>homepage works!</p>
+<main>
+  <div class="container">
+    <div class="header">
+      <h1>
+        Welcome to the Business Simulator! This is an interactive tool that
+        helps you test business strategies and improve decision-making.
+      </h1>
+    </div>
+    <div class="content">
+      <div class="intro">
+        <h3>Start the simulation by clicking the button below:</h3>
+        <button
+          pButton
+          class="no-background inline-button"
+          icon="pi pi-plus"
+          [disabled]="showMyCompanySetup"
+          label="Create my company"
+          (click)="toggleCompanySetup()"
+        ></button>
+      </div>
+      <div [ngClass]="{ 'company-setup': !showMyCompanySetup }">
+        <div class="card">
+          <div class="card-header">
+            <h2>Company Setup</h2>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="companyForm">
+              <div class="p-field">
+                <label for="name">Company Name</label>
+                <input
+                  type="text"
+                  pInputText
+                  id="name"
+                  formControlName="name"
+                  placeholder="Enter company name"
+                />
+              </div>
+              <div class="p-field">
+                <label for="industry">Industry</label>
+                <p-dropdown
+                  id="industry"
+                  [options]="industries"
+                  formControlName="industry"
+                  placeholder="Select Industry"
+                ></p-dropdown>
+              </div>
+              <div class="p-field">
+                <button
+                  pButton
+                  label="Create Company"
+                  icon="pi pi-save"
+                  (click)="createCompany()"
+                  [disabled]="!companyForm.valid"
+                ></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-container">
+      <div class="container">
+        <table>
+          <tr>
+            <td>
+              <h3>{{ randomTips[0].title }}</h3>
+              <p>{{ randomTips[0].description }}</p>
+            </td>
+            <td>
+              <h3>{{ randomTips[1].title }}</h3>
+              <p>{{ randomTips[1].description }}</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3>{{ randomTips[2].title }}</h3>
+              <p>{{ randomTips[2].description }}</p>
+            </td>
+            <td>
+              <h3>{{ randomTips[3].title }}</h3>
+              <p>{{ randomTips[3].description }}</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>

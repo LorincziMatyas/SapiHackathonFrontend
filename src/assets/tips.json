@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Budgeting",
+    "description": "Create a monthly budget and track your expenses."
+  },
+  {
+    "title": "Saving",
+    "description": "Save 10-20% of your income. Automate your savings!"
+  },
+  {
+    "title": "Investing",
+    "description": "Start investing for your future, whether for retirement or other goals."
+  },
+  {
+    "title": "Debt",
+    "description": "Pay off your debts as quickly as possible. Avoid high-interest loans."
+  },
+  {
+    "title": "Insurance",
+    "description": "Have adequate insurance for unexpected events. Review your insurance policies annually to ensure they still meet your needs."
+  },
+  {
+    "title": "Credit Card",
+    "description": "Only use a credit card if you can afford to pay the full balance the next month. Avoid credit card debt."
+  },
+  {
+    "title": "Financial Goals",
+    "description": "Set financial goals and create a plan to achieve them. Track your progress towards your goals regularly."
+  },
+  {
+    "title": "Financial Literacy",
+    "description": "Educate yourself about finances and stay informed about the financial markets. Avoid financial scams."
+  },
+  {
+    "title": "Real Estate Investment",
+    "description": "Consider real estate investment as a long-term investment. Conduct thorough research before investing in property."
+  },
+  {
+    "title": "Emergency Fund",
+    "description": "Create an emergency fund to cover unexpected expenses. The emergency fund should cover 3-6 months of living expenses."
+  },
+  {
+    "title": "Giving Back",
+    "description": "Donate to charities if you can afford it. Choose charities that align with your values."
+  },
+  {
+    "title": "Retirement Planning",
+    "description": "Start planning for retirement early. Take advantage of retirement savings programs."
+  },
+  {
+    "title": "Raising Financially Savvy Children",
+    "description": "Teach your children about financial literacy. Help your children achieve their financial goals."
+  },
+  {
+    "title": "Estate Planning",
+    "description": "Create a will. Discuss your financial plans with your family."
+  },
+  {
+    "title": "Tax Optimization",
+    "description": "Take advantage of legal tax breaks and deductions. Consult a tax professional if you need help with tax planning."
+  },
+  {
+    "title": "Home Buying",
+    "description": "Only buy a home if you can afford it. Conduct thorough research before buying a home."
+  },
+  {
+    "title": "Car Buying",
+    "description": "Only buy a car if you can afford it. Consider buying a used car."
+  },
+  {
+    "title": "Travel Tips",
+    "description": "Save on travel if possible. Utilize travel tips and tricks to save money."
+  },
+  {
+    "title": "Healthcare",
+    "description": "Have adequate health insurance. Take care of your health to avoid expensive medical costs."
+  },
+  {
+    "title": "Legal Advice",
+    "description": "Seek legal advice if you need help with your legal matters."
+  }
+]

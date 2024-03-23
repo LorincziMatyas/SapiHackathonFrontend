@@ -11,7 +11,7 @@ import { FinancialreportpageComponent } from './pages/financialreportpage/financ
 const routes: Routes = [
   { path: 'products/:id', component: ProductpageComponent },
   {
-    path: 'home',
+    path: '',
     component: HomepageComponent,
   },
   {
