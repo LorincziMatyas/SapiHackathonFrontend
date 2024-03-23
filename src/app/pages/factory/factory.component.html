@@ -1,0 +1,40 @@
+<div class="big-container">
+  <div class="button-container"></div>
+  <div class="table-chart-container">
+    <div class="table-container">
+      <p-table [value]="data">
+        <ng-template pTemplate="header">
+          <tr>
+            <th colspan="2">Total costs: {{ calculateTotalCost() }} $</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-row>
+          <tr [ngClass]="{ 'even-row': row.index % 2 === 0 }">
+            <td>{{ row.what }}</td>
+            <td>{{ row.cost }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+    <div class="chart-container">
+      <div class="buttons">
+        <button
+          class="view-button"
+          pButton
+          icon="pi pi-eye"
+          label="View Product"
+        ></button>
+        <button
+          class="new-factory-button"
+          pButton
+          icon="pi pi-plus"
+          label="New Factory"
+        ></button>
+      </div>
+      <canvasjs-chart
+        [options]="chartOptions"
+        [styles]="{ width: '100%', height: '360px', margin: '10px' }"
+      ></canvasjs-chart>
+    </div>
+  </div>
+</div>

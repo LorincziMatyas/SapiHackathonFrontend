@@ -1,0 +1,107 @@
+<p>productpage works!</p>
+<div class="main">
+  <div class="general-info">
+    <div class="card">
+      <i class="pi pi-money-bill" style="color: 'red'"></i>
+      <p>35241</p>
+    </div>
+    <div class="card">
+      <i class="pi pi-calendar"></i>
+      <p>35241</p>
+    </div>
+  </div>
+
+  <div class="product-info">
+    <img class="product-img" src="https://picsum.photos/200/300" />
+    <h1>{{ product.name }}</h1>
+  </div>
+
+  <div class="container-graph">
+    <p-card class="custom-card2">
+      <h2>Price Information</h2>
+      <div class="price-infos">
+        <div class="card-price-info">
+          <h1>
+            <b>{{ product.costOfMakingUnit }}$</b>
+          </h1>
+          <p>Unit making price</p>
+        </div>
+
+        <div class="card-price-info">
+          <h1>
+            <b>{{ product.unitSellPrice }}$</b>
+          </h1>
+          <p>Unit sell price</p>
+        </div>
+
+        <div class="card-price-info">
+          <h1>
+            <b>{{ product.requiredQuantity }}</b>
+          </h1>
+          <p>Quantity</p>
+        </div>
+      </div>
+    </p-card>
+    <div class="chart-container">
+      <canvasjs-chart
+        [options]="chartOptions"
+        [styles]="{ width: '100%', height: '360px' }"
+      ></canvasjs-chart>
+    </div>
+  </div>
+
+  <div class="bottom-container">
+    <p-card class="custom-card">
+      <h2>Activity</h2>
+      <div class="activity-info">
+        <input
+          type="text"
+          pInputText
+          [(ngModel)]="value"
+          class="activity-info-input"
+        />
+        <p-slider [(ngModel)]="value" class="w-full"></p-slider>
+      </div>
+    </p-card>
+    <p-card class="custom-card">
+      <div>
+        <h3>Factory Contract</h3>
+        <p class="text-green">
+          <b
+            >Contract Intake:{{
+              product.unitSellPrice * product.requiredQuantity
+            }}$</b
+          >
+        </p>
+        <p class="text-red">
+          <b
+            >Expenses:{{
+              product.costOfMakingUnit * product.requiredQuantity
+            }}$</b
+          >
+        </p>
+
+        <p
+          class="text-sell"
+          [ngClass]="{
+            'text-green':
+              (product.unitSellPrice - product.costOfMakingUnit) *
+                product.requiredQuantity >
+              0,
+            'text-red':
+              (product.unitSellPrice - product.costOfMakingUnit) *
+                product.requiredQuantity <=
+              0
+          }"
+        >
+          <b
+            >Overall intake:{{
+              (product.unitSellPrice - product.costOfMakingUnit) *
+                product.requiredQuantity
+            }}$</b
+          >
+        </p>
+      </div>
+    </p-card>
+  </div>
+</div>
