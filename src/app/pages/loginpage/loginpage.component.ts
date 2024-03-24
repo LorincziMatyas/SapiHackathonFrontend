@@ -41,7 +41,7 @@ export class LoginpageComponent implements OnInit {
       .loginUser(this.formDataToUserData(this.loginDatas))
       .subscribe({
         next: (response) => {
-          this.router.navigate(['/home']);
+          this.router.navigate(['/']);
           console.log('resp ', response);
         },
         error: (error) => {

@@ -28,7 +28,7 @@ export class HomepageComponent implements OnInit {
 
   companyForm = new FormGroup({
     name: new FormControl('', Validators.required),
-    address: new FormControl('', Validators.required),
+    industry: new FormControl('', Validators.required),
   });
 
   toggleCompanySetup() {
