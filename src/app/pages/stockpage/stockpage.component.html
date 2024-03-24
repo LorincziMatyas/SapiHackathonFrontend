@@ -20,37 +20,49 @@
     </button>
     <!-- <button (click)="viewLiveStocks()">View Live stocks</button> -->
   </div>
-
   <div class="stock_container">
     <div *ngFor="let stock of stocks; let i = index" class="stocks">
-      <div>{{ stock.company_name }}</div>
+      <div class="company-name">
+        <strong>{{ stock.company_name }}</strong>
+      </div>
       <div>Number of stocks of the company: {{ stock.stock_number }}</div>
-      <div>Price of one stock: {{ stock.stock_price }}</div>
+      <div></div>
+      <!-- <div>Price of one stock: {{ stock.stock_price }}</div> -->
       <div class="chart_div">
-        CHART PLACEHOLDERS
-        <div>Stock price history</div>
-        <div style="display: flex; flex-wrap: wrap">
-          {{ data[i] }}
-        </div>
+        <canvasjs-chart
+          class="live-line-chart"
+          [options]="chartOptions[i]"
+          (chartInstance)="getChartInstance($event, i)"
+        ></canvasjs-chart>
+        <!-- <div>Stock price history</div>
+      <div style="display: flex; flex-wrap: wrap">
+        {{ data[i] }}
+      </div> -->
       </div>
 
       <!-- <canvasjs-chart [options]="chartOptions"></canvasjs-chart> -->
-      <div>
+      <div style="display: flex; flex-direction: row">
         <button
           pButton
           icon="pi pi-shopping-cart"
           style="gap: 10px; margin: 10px"
-          (click)="buyStock(stock)"
+          (click)="buyStock(stock, i)"
         >
           Buy
         </button>
+
         <button
           pButton
           icon="pi pi-money-bill"
           style="gap: 10px; margin: 10px"
-          (click)="sellStock(stock)"
+          (click)="sellStock(stock, i)"
+          *ngIf="stockQuantity[i] != 0; disabled"
         >
           Sell
+        </button>
+
+        <button class="counter-button" disabled pButton>
+          {{ stockQuantity[i] }}
         </button>
       </div>
     </div>

@@ -7,7 +7,7 @@
   justify-content: left;
   align-items: stretch;
   width: 400px;
-  height: 400px;
+  height: 370px;
   margin: 20px;
   gap: 10px;
   border: 1px solid lightgray;
@@ -24,9 +24,30 @@
   padding-top: 0;
 }
 
+.live-line-chart {
+  width: 340px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.company-name {
+  font-style: italic;
+}
+
+.counter-button {
+  gap: 10px;
+  margin: 10px;
+  background-color: transparent;
+  border: none;
+  color: black;
+}
+
 .chart_div {
   background-color: rgb(196, 129, 81);
-  width: 300px;
+  width: 340px;
   height: 180px;
   display: flex;
   flex-direction: column;
