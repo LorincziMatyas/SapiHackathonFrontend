@@ -72,12 +72,6 @@ export class FactoryComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.productService.getProuctById(1).subscribe({
-      next: (response) => {
-        console.log('this.productService.getProuctById(1): ', response);
-      },
-    });
-
     this.chartOptions.data[0].dataPoints = [];
     this.data.forEach((item) => {
       this.chartOptions.data[0].dataPoints.push({

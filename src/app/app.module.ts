@@ -26,6 +26,7 @@ import { DialogService } from 'primeng/dynamicdialog';
 import { DynamicDialogRef } from 'primeng/dynamicdialog';
 import { TableDialogComponent } from './components/table-dialog/table-dialog.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FinancialreportpageComponent } from './pages/financialreportpage/financialreportpage.component';
 
 @NgModule({
   declarations: [
