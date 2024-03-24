@@ -1,28 +1,18 @@
 <div class="navbar-fade-in-element">
   <nav class="navbar-container">
     <ng-container>
-      <div
-        style="
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-          align-items: center;
-        "
-      >
+      <div class="navbar-head-container">
         <div class="navbar-element-logo"></div>
-        <button
-          pButton
-          icon="pi pi-home"
-          style="
-            height: fit-content;
-            background: none;
-            border: none;
-            color: black;
-          "
-          routerLink=""
-        ></button>
       </div>
-      <div class="navbar-element">
+      <div class="navbar-button">
+        <button
+          class="navbar-element-button"
+          pButton
+          label="Home"
+          icon="pi pi-home"
+          routerLink=""
+          style="font-size: 25px"
+        ></button>
         <h3>Reports</h3>
         <div class="button-container">
           <div class="navbar-button">

@@ -6,6 +6,21 @@
   padding-left: 10px;
 }
 
+.home-button {
+  font-size: 25px;
+  height: fit-content;
+  background: none;
+  border: none;
+  color: black;
+}
+
+.navbar-head-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .ng-container {
   width: 38vh;
   height: 100vh;
