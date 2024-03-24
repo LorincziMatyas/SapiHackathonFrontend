@@ -1,7 +1,7 @@
 <main>
   <div class="research-development-container">
     <header>
-      <div class="header-element">Research and Development</div>
+      <div class="header-element">Investments</div>
       <div class="header-element">Balance: {{ balance | currency }}</div>
     </header>
 
@@ -33,8 +33,8 @@
     </div>
 
     <div class="research-button" *ngIf="selectedProduct">
-      <p>R&D Price: {{ selectedProduct.rAndDPrice | currency }}</p>
-      <button (click)="performResearchAndDevelopment()">R&D</button>
+      <p>Price: {{ selectedProduct.rAndDPrice | currency }}</p>
+      <button (click)="performResearchAndDevelopment()">Buy</button>
     </div>
   </div>
 </main>

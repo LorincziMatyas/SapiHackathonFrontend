@@ -82,7 +82,7 @@ p {
 .no-background {
   background-color: transparent;
   border: none;
-  color: #1f1f1f;
+  color: white;
 }
 .button-container {
   display: flex;
@@ -115,6 +115,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-image: url("../../../assets/homebg.jpeg");
   //   align-items: stretch;
 }
 .footer-container {
@@ -138,4 +139,22 @@ main {
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 20px;
+}
+
+h1,
+h2,
+h3 {
+  color: black;
+}
+
+.header,
+.intro {
+  background-color: rgba(233, 233, 233, 0.763);
+  margin: 20px;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.setup {
+  background-color: rgba(233, 233, 233, 0.763);
 }
