@@ -8,28 +8,18 @@ import { StockpageComponent } from './pages/stockpage/stockpage.component';
 import { LoginpageComponent } from './pages/loginpage/loginpage.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { FinancialreportpageComponent } from './pages/financialreportpage/financialreportpage.component';
+import { CompanyPageComponent } from './pages/company-page/company-page.component';
 
 const routes: Routes = [
   { path: 'products/:id', component: ProductpageComponent },
-  {
-    path: '',
-    component: HomepageComponent,
-  },
-  {
-    path: 'navbar',
-    component: NavbarComponent,
-  },
+  { path: '', component: HomepageComponent },
+  { path: 'navbar', component: NavbarComponent },
   { path: 'factoryPage', component: FactoryComponent },
   { path: 'stocks', component: StockpageComponent },
-  {
-    path: 'loginUser',
-    component: LoginpageComponent,
-  },
-  {
-    path: 'registration',
-    component: RegistrationComponent,
-  },
+  { path: 'loginUser', component: LoginpageComponent },
+  { path: 'registration', component: RegistrationComponent },
   { path: 'financialReportPage', component: FinancialreportpageComponent },
+  { path: 'companyPage', component: CompanyPageComponent },
 ];
 
 @NgModule({

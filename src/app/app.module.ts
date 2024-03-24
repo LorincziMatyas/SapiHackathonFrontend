@@ -25,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { StockpageComponent } from './pages/stockpage/stockpage.component';
 import { ChartModule } from 'primeng/chart';
 import { FinancialreportpageComponent } from './pages/financialreportpage/financialreportpage.component';
+import { CompanyPageComponent } from './pages/company-page/company-page.component';
 // import { MatMomentDateModule } from '@angular/material-moment-adapter'; // Import the MatMomentDateModule
 
 @NgModule({
@@ -42,6 +43,7 @@ import { FinancialreportpageComponent } from './pages/financialreportpage/financ
     LoginpageComponent,
     RegistrationComponent,
     FinancialreportpageComponent,
+    CompanyPageComponent,
   ],
   imports: [
     BrowserModule,

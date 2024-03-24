@@ -1,0 +1,46 @@
+<main>
+  <div class="cards">
+    <h1>My Company</h1>
+    <div class="basic-info">
+      <p>Company page content</p>
+      <p>Budget: {{ budget }}$</p>
+      <p>Profit: {{ profit }}$</p>
+    </div>
+  </div>
+
+  <div class="cards">
+    <h2>Leased Factories</h2>
+    <div class="basic-info">
+      <ul>
+        <li *ngFor="let factory of leasedFactory">{{ factory }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cards">
+    <h2>Owned Factories</h2>
+    <div class="basic-info">
+      <ul>
+        <li *ngFor="let factory of ownedFactory">{{ factory }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cards">
+    <h2>Products</h2>
+    <div class="basic-info">
+      <ul>
+        <li *ngFor="let product of Products">{{ product }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cards">
+    <h2>Owned Stocks</h2>
+    <div class="basic-info">
+      <ul>
+        <li *ngFor="let stock of ownedStocks">{{ stock }}</li>
+      </ul>
+    </div>
+  </div>
+</main>

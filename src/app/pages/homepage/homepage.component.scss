@@ -9,14 +9,15 @@
 
 table {
   //   height: 20%;
-  background-color: #212121;
+  margin: 10px;
+  border-radius: 15px;
+  background-color: #414141;
   border-collapse: collapse;
   width: 100%;
 }
 
 td {
   height: 50%;
-
   width: 45%;
   margin: 0px;
   border: 1px solid #ddd;
@@ -79,7 +80,7 @@ p {
 .no-background {
   background-color: transparent;
   border: none;
-  color: #000;
+  color: #1f1f1f;
 }
 .button-container {
   display: flex;
