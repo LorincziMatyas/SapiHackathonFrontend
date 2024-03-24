@@ -28,6 +28,7 @@ import { FinancialreportpageComponent } from './pages/financialreportpage/financ
 import { CompanyPageComponent } from './pages/company-page/company-page.component';
 import { ResAndDevPageComponent } from './pages/res-and-dev-page/res-and-dev-page.component';
 import { BankPageComponent } from './pages/bank-page/bank-page.component';
+import { LeaderboardpageComponent } from './pages/leaderboardpage/leaderboardpage.component';
 // import { MatMomentDateModule } from '@angular/material-moment-adapter'; // Import the MatMomentDateModule
 
 @NgModule({
@@ -48,6 +49,7 @@ import { BankPageComponent } from './pages/bank-page/bank-page.component';
     CompanyPageComponent,
     ResAndDevPageComponent,
     BankPageComponent,
+    LeaderboardpageComponent,
   ],
   imports: [
     BrowserModule,

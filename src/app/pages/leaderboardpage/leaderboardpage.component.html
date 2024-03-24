@@ -1,0 +1,57 @@
+<main>
+    <div class="leaderboard-container">
+  <h1>Leaderboard</h1>
+
+  <div class="tables">
+    <div class="table">
+      <table>
+        <thead>
+          <tr>
+            <th class="border">Rank</th>
+            <th class="border">Name</th>
+            <th class="border">Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let player of players; let i = index">
+            <td class="border">{{ i + 1 }}</td>
+            <td class="border">{{ player.name }}</td>
+            <td class="border">{{ player.score }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table">
+      <table>
+        <tr class="first-three">
+          <td class="color-none"></td>
+          <td class="color-none">{{ players[0].name }}</td>
+          <td class="color-none"></td>
+        </tr>
+        <tr class="first-three">
+          <td class="color-none"></td>
+          <td class="color-gold">1st</td>
+          <td class="color-none">{{ players[1].name }}</td>
+        </tr>
+        <tr class="first-three">
+          <td class="color-none">{{ players[2].name }}</td>
+          <td class="color-gold"></td>
+          <td class="color-silver">2nd</td>
+        </tr>
+        <tr class="first-three">
+          <td class="color-bronze">3rd</td>
+          <td class="color-gold"></td>
+          <td class="color-silver"></td>
+        </tr>
+      </table>
+      <h4>
+        Congrats to {{ players[0].name }}, {{ players[1].name }},
+        {{ players[2].name }}! <br />
+        You are the top 3 players! <br />
+        Keep it up!
+      </h4>
+    </div>
+  </div>
+</div>
+
+</main>
