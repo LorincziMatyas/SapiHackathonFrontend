@@ -17,8 +17,11 @@
   padding: 0;
 }
 
-.big-container {
+main {
+  height: 100vh;
   padding: 25px;
+  width: 80.5vw;
+  overflow-y: auto;
 }
 
 .p-datatable th,

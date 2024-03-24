@@ -1,0 +1,48 @@
+.stocks {
+  background-color: lightgray;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: stretch;
+  width: 400px;
+  height: 400px;
+  margin: 20px;
+  gap: 10px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+
+.stock_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  padding: 50px;
+  padding-top: 0;
+}
+
+.chart_div {
+  background-color: rgb(196, 129, 81);
+  width: 300px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+}
+
+.company_budget {
+  font-weight: 900;
+  font-size: 40px;
+  margin-top: 20px;
+}
+
+main {
+  height: 100vh;
+  overflow-y: auto;
+}

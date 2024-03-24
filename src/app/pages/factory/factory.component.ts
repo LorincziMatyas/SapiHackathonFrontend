@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { NgClass } from '@angular/common';
 import { PopUpService } from 'src/app/services/pop-up.service';
 import { Product } from 'src/app/models/product';
 import { FactoryService } from 'src/app/services/factory-service.service';
+import { ProductService } from 'src/app/services/product.service';
 
 export interface Data {
   what: string;
@@ -68,7 +68,8 @@ export class FactoryComponent implements OnInit {
 
   constructor(
     private popUp: PopUpService,
-    private factoryService: FactoryService
+    private factoryService: FactoryService,
+    private productService: ProductService
   ) {}
 
   ngOnInit(): void {

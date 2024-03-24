@@ -1,15 +1,48 @@
 <div class="navbar-fade-in-element">
   <nav class="navbar-container">
     <ng-container>
-      <div class="navbar-element-logo">
-        <a routerLink="/homepage">
-          <h1>Ide jon a logo</h1>
-        </a>
-        <button pButton class="user-button" icon="pi pi-user"></button>
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+        "
+      >
+        <div class="navbar-element-logo"></div>
+        <button
+          pButton
+          icon="pi pi-home"
+          style="
+            height: fit-content;
+            background: none;
+            border: none;
+            color: black;
+          "
+          routerLink=""
+        ></button>
       </div>
       <div class="navbar-element">
         <h3>Reports</h3>
         <div class="button-container">
+          <div class="navbar-button">
+            <button
+              pButton
+              class="navbar-element-button"
+              icon="pi pi-briefcase"
+              label="My company"
+              routerLink="/companyPage"
+            ></button>
+          </div>
+          <div class="nevbar-button">
+            <button
+              pButton
+              class="navbar-element-button"
+              icon="pi pi-chart-line"
+              label="Stocks"
+              routerLink="/stocks"
+            ></button>
+          </div>
           <div class="navbar-button">
             <button
               pButton
@@ -34,14 +67,6 @@
               icon="pi pi-chart-line"
               label="Financial report"
               routerLink="/financialReportPage"
-            ></button>
-          </div>
-          <div class="navbar-button">
-            <button
-              pButton
-              class="navbar-element-button"
-              icon="pi pi-file-edit"
-              label="Exercise report"
             ></button>
           </div>
         </div>
@@ -113,5 +138,4 @@
       </div>
     </ng-container>
   </nav>
-  <!-- </div> -->
 </div>
