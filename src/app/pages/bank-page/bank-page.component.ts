@@ -31,6 +31,7 @@ export class BankPageComponent {
   calculateInterest(): void {
     const interestAmount = this.loanAmount * this.interestRate;
     this.loanAmount += interestAmount;
+    this.loanAmount = Math.floor(this.loanAmount * 100) / 100;
 
     if (this.loanAmount > this.balance) {
       console.log('Loan amount exceeds balance. You went bankrupt!');
