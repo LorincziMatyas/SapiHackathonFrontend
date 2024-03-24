@@ -1,0 +1,81 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  //   background-color: aqua;
+  width: 80.7vw;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 20px;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.header-element {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  min-width: 30vw;
+  align-items: center;
+}
+
+.research-development-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 1);
+}
+
+.factories h2,
+.products h2,
+.research-button p {
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #f0f0f0;
+}
+
+.research-button button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.research-button button:hover {
+  background-color: #0056b3;
+}
+
+/* Add style for the selected item */
+li.selected {
+  background-color: #007bff;
+  color: #fff;
+}

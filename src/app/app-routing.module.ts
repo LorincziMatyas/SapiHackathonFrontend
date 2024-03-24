@@ -9,6 +9,8 @@ import { LoginpageComponent } from './pages/loginpage/loginpage.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { FinancialreportpageComponent } from './pages/financialreportpage/financialreportpage.component';
 import { CompanyPageComponent } from './pages/company-page/company-page.component';
+import { ResAndDevPageComponent } from './pages/res-and-dev-page/res-and-dev-page.component';
+import { BankPageComponent } from './pages/bank-page/bank-page.component';
 
 const routes: Routes = [
   { path: 'products/:id', component: ProductpageComponent },
@@ -20,6 +22,8 @@ const routes: Routes = [
   { path: 'registration', component: RegistrationComponent },
   { path: 'financialReportPage', component: FinancialreportpageComponent },
   { path: 'companyPage', component: CompanyPageComponent },
+  { path: 'resanddev', component: ResAndDevPageComponent },
+  { path: 'bank', component: BankPageComponent },
 ];
 
 @NgModule({

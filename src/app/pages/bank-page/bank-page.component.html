@@ -1,0 +1,16 @@
+<main>
+  <div class="loan-container">
+    <h1>Bank Loan Page</h1>
+
+    <div>
+      <label for="loanAmount">Enter Loan Amount:</label>
+      <input type="number" id="loanAmount" [(ngModel)]="loanAmount" />
+    </div>
+
+    <p>Balance: {{ balance | currency }}</p>
+    <p>Time Elapsed: {{ timeElapsed }} seconds</p>
+
+    <button (click)="takeLoan()">Take Loan</button>
+    <button (click)="repayLoan()">Repay Loan</button>
+  </div>
+</main>

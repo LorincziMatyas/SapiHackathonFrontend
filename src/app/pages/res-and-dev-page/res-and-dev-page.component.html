@@ -1,0 +1,40 @@
+<main>
+  <div class="research-development-container">
+    <header>
+      <div class="header-element">Research and Development</div>
+      <div class="header-element">Balance: {{ balance | currency }}</div>
+    </header>
+
+    <div class="factories">
+      <h2>Factories</h2>
+      <ul>
+        <li
+          *ngFor="let factory of factories"
+          (click)="selectFactory(factory)"
+          [class.selected]="selectedFactory === factory"
+        >
+          {{ factory.name }}
+        </li>
+      </ul>
+    </div>
+
+    <div class="products" *ngIf="selectedFactory">
+      <h2>Products of {{ selectedFactory.name }}</h2>
+      <ul>
+        <li
+          *ngFor="let product of selectedFactory.products"
+          (click)="selectProduct(product)"
+          [class.selected]="selectedProduct === product"
+        >
+          {{ product.name }} - Cost: {{ product.cost | currency }} - Quantity:
+          {{ product.quantity }}
+        </li>
+      </ul>
+    </div>
+
+    <div class="research-button" *ngIf="selectedProduct">
+      <p>R&D Price: {{ selectedProduct.rAndDPrice | currency }}</p>
+      <button (click)="performResearchAndDevelopment()">R&D</button>
+    </div>
+  </div>
+</main>
