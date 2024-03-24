@@ -9,7 +9,12 @@ export class FactoryService {
   apiUri = 'http://127.0.0.1:5000';
   constructor(private http: HttpClient) {}
   addFactory() {
-    var data: Factory = { name: 'Factory', description: 'Random' };
+    var data: Factory = {
+      name: 'Factory',
+      description: 'Random',
+      profit: 1,
+      products: [],
+    };
     const url = this.apiUri + '/api/newfactory';
     return this.http.post(url, data);
   }

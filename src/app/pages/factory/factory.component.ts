@@ -3,6 +3,8 @@ import { PopUpService } from 'src/app/services/pop-up.service';
 import { Product } from 'src/app/models/product';
 import { FactoryService } from 'src/app/services/factory-service.service';
 import { ProductService } from 'src/app/services/product.service';
+import { CompaniesService } from 'src/app/services/companies.service';
+import { Factory } from 'src/app/models/factory';
 
 export interface Data {
   what: string;
@@ -43,6 +45,8 @@ export class FactoryComponent implements OnInit {
     },
   ];
 
+  // tableElements: Factory[] = [];
+
   data: Data[] = [
     { what: 'Material', cost: 100000 },
     { what: 'Labor', cost: 58080 },
@@ -69,10 +73,17 @@ export class FactoryComponent implements OnInit {
   constructor(
     private popUp: PopUpService,
     private factoryService: FactoryService,
-    private productService: ProductService
+    private productService: ProductService,
+    private companyService: CompaniesService
   ) {}
 
   ngOnInit(): void {
+    // this.companyService.getFactoriesByCompany(1).subscribe({
+    //   next: (result) => {
+    //     this.tableElements = result;
+    //   },
+    // });
+
     this.chartOptions.data[0].dataPoints = [];
     this.data.forEach((item) => {
       this.chartOptions.data[0].dataPoints.push({

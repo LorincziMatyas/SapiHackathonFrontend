@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { Factory } from 'src/app/models/factory';
 
 @Component({
   selector: 'app-table-dialog',
@@ -8,7 +9,7 @@ import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
 })
 export class TableDialogComponent {
   promptText = '';
-  tableElements!: [];
+  tableElements!: Factory[];
   constructor(
     private dialogRef: DynamicDialogRef,
     private dialogConfig: DynamicDialogConfig
